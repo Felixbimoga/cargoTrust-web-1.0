@@ -1,0 +1,71 @@
+<div class="dashboard-layout" [class.sidebar-close]="sidebarCollapsed">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">CargoTrust</div>
+
+    <nav class="menu">
+      <a class="active">🏠 Dashboard</a>
+      <a>📦 Expéditions</a>
+      <a>👤 Clients</a>
+      <a>💳 Paiements</a>
+      <a>📊 Rapports</a>
+      <a>⚙️ Paramètres</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="topbar">
+
+      <div class="left-actions">
+        <button class="icon-btn" (click)="toggleSidebar()">
+          ☰
+        </button>
+
+        <div>
+          <h1>Dashboard</h1>
+          <p>Bienvenue sur votre espace CargoTrust</p>
+        </div>
+      </div>
+
+      <div class="right-actions">
+        <button class="icon-btn" (click)="toggleTheme()">
+          {{ darkMode ? '☀️' : '🌙' }}
+        </button>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40" alt="">
+          <span>Admin</span>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Cards -->
+    <section class="stats-grid">
+      <div class="card">
+        <h3>Expéditions</h3>
+        <p>1,248</p>
+      </div>
+
+      <div class="card">
+        <h3>Clients</h3>
+        <p>324</p>
+      </div>
+
+      <div class="card">
+        <h3>Revenus</h3>
+        <p>12.5M FCFA</p>
+      </div>
+
+      <div class="card">
+        <h3>En attente</h3>
+        <p>42</p>
+      </div>
+    </section>
+
+  </main>
+</div>

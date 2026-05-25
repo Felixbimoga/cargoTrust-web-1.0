@@ -1,0 +1,99 @@
+<div class="login-wrapper">
+
+  <div class="left-panel">
+    <div class="overlay"></div>
+  </div>
+
+  <div class="right-panel">
+    <div class="form-container">
+
+      <div class="brand">
+        <div class="logo-circle">
+          <span class="logo-icon">🚢</span>
+        </div>
+        <div>
+          <div class="brand-name">CargoTrust</div>
+          <div class="brand-tag">Plateforme d'importation</div>
+        </div>
+      </div>
+
+      <div class="method-badge">
+        <div class="method-icon-wrap email-icon"><span>✉️</span></div>
+        <div>
+          <div class="method-name">Email</div>
+          <div class="method-desc">Le code a été envoyé à <strong>{{ maskedEmail }}</strong></div>
+        </div>
+      </div>
+
+      <h2 class="form-title">Entrez le code 📩</h2>
+      <p class="form-sub">
+        Le code de vérification est valable <strong>10 minutes</strong>.
+        Vérifiez aussi vos spams.
+      </p>
+
+      <div class="otp-wrapper">
+        <div class="otp-group">
+          <input autocomplete="one-time-code"
+            *ngFor="let i of [0,1,2]"
+            #otpInput
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            class="otp-input"
+            [class.filled]="otpValues[i]"
+            [class.has-error]="otpError"
+            (input)="onInput($event, i)"
+            (keydown)="onKeydown($event, i)"
+            (paste)="onPaste($event)"
+          />
+        </div>
+        <span class="otp-dash">—</span>
+        <div class="otp-group">
+          <input autocomplete="one-time-code"
+            *ngFor="let i of [3,4,5]"
+            #otpInput
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            class="otp-input"
+            [class.filled]="otpValues[i]"
+            [class.has-error]="otpError"
+            (input)="onInput($event, i)"
+            (keydown)="onKeydown($event, i)"
+            (paste)="onPaste($event)"
+          />
+        </div>
+      </div>
+
+      <div class="error-msg" *ngIf="otpError">
+        {{ otpError }}
+      </div>
+
+      <div class="resend-row">
+        <span class="resend-label">Vous n'avez pas reçu le code ?</span>
+        <button
+          class="resend-btn"
+          [disabled]="countdown > 0"
+          (click)="resendCode()"
+        >
+          <span *ngIf="countdown > 0">Renvoyer ({{ countdown }}s)</span>
+          <span *ngIf="countdown === 0">Renvoyer</span>
+        </button>
+      </div>
+
+      <div class="actions-row">
+        <button class="btn-back" (click)="goBack()">← Retour</button>
+        <button
+          class="btn-login"
+          [disabled]="!isComplete || isLoading"
+          [class.loading]="isLoading"
+          (click)="confirm()"
+        >
+          <span *ngIf="!isLoading">Confirmer</span>
+          <span *ngIf="isLoading" class="spinner"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+:root {
+  --primary: #0D1B2A;
+  --secondary: #F77F00;
+  --accent: #00B4D8;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --blue-50: #E3F2FD;
+  --blue-100: #BBDEFB;
+  --blue-200: #90CAF9;
+  --blue-300: #64B5F6;
+  --blue-400: #42A5F5;
+  --blue-500: #2196F3;
+  --blue-600: #1E88E5;
+  --blue-700: #1976D2;
+  --blue-800: #1565C0;
+  --blue-900: #0D47A1;
+
+  --red-50: #FFEBEE;
+  --red-100: #FFCDD2;
+  --red-200: #EF9A9A;
+  --red-300: #E57373;
+  --red-400: #EF5350;
+  --red-500: #F44336;
+  --red-600: #E53935;
+  --red-700: #D32F2F;
+  --red-800: #C62828;
+  --red-900: #B71C1C;
+
+  --green-50: #E8F5E9;
+  --green-100: #C8E6C9;
+  --green-200: #A5D6A7;
+  --green-300: #81C784;
+  --green-400: #66BB6A;
+  --green-500: #4CAF50;
+  --green-600: #43A047;
+  --green-700: #388E3C;
+  --green-800: #2E7D32;
+  --green-900: #1B5E20;
+
+  --yellow-50: #FFFDE7;
+  --yellow-100: #FFF9C4;
+  --yellow-200: #FFF59D;
+  --yellow-300: #FFF176;
+  --yellow-400: #FFEE58;
+  --yellow-500: #FFEB3B;
+  --yellow-600: #FDD835;
+  --yellow-700: #FBC02D;
+  --yellow-800: #F9A825;
+  --yellow-900: #F57F17;
+
+  --orange-50: #FFF3E0;
+  --orange-100: #FFE0B2;
+  --orange-200: #FFCC80;
+  --orange-300: #FFB74D;
+  --orange-400: #FFA726;
+  --orange-500: #FF9800;
+  --orange-600: #FB8C00;
+  --orange-700: #F57C00;
+  --orange-800: #EF6C00;
+  --orange-900: #E65100;
+
+  --purple-50: #F3E5F5;
+  --purple-100: #E1BEE7;
+  --purple-200: #CE93D8;
+  --purple-300: #BA68C8;
+  --purple-400: #AB47BC;
+  --purple-500: #9C27B0;
+  --purple-600: #8E24AA;
+  --purple-700: #7B1FA2;
+  --purple-800: #6A1B9A;
+  --purple-900: #4A148C;
+
+  --pink-50: #FCE4EC;
+  --pink-100: #F8BBD0;
+  --pink-200: #F48FB1;
+  --pink-300: #F06292;
+  --pink-400: #EC407A;
+  --pink-500: #E91E63;
+  --pink-600: #D81B60;
+  --pink-700: #C2185B;
+  --pink-800: #AD1457;
+  --pink-900: #880E4F;
+
+  --cyan-50: #E0F7FA;
+  --cyan-100: #B2EBF2;
+  --cyan-200: #80DEEA;
+  --cyan-300: #4DD0E1;
+  --cyan-400: #26C6DA;
+  --cyan-500: #00BCD4;
+  --cyan-600: #00ACC1;
+  --cyan-700: #0097A7;
+  --cyan-800: #00838F;
+  --cyan-900: #006064;
+
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  --brown-50: #EFEBE9;
+  --brown-100: #D7CCC8;
+  --brown-200: #BCAAA4;
+  --brown-300: #A1887F;
+  --brown-400: #8D6E63;
+  --brown-500: #795548;
+  --brown-600: #6D4C41;
+  --brown-700: #5D4037;
+  --brown-800: #4E342E;
+  --brown-900: #3E2723;
+
+  --turquoise-100: #D9FFFB;
+  --turquoise-200: #9BF6FF;
+  --turquoise-300: #5EEAD4;
+  --turquoise-400: #2DD4BF;
+  --turquoise-500: #14B8A6;
+  --turquoise-600: #0F766E;
+  --gold: #FFD700;
+  --gold-light: #FFECB3;
+  --gold-dark: #C9A227;
+
+  --silver: #C0C0C0;
+  --silver-light: #E5E5E5;
+  --silver-dark: #8C8C8C;
+
+  --bronze: #CD7F32;
+  --platinum: #E5E4E2;
+
+  --neon-blue: #00F0FF;
+  --neon-green: #39FF14;
+  --neon-pink: #FF10F0;
+  --neon-purple: #BC13FE;
+  --neon-yellow: #FFFF33;
+  --neon-orange: #FF5F1F;
+
+  --pastel-pink: #FFD6E0;
+  --pastel-blue: #A2D2FF;
+  --pastel-green: #B7E4C7;
+  --pastel-yellow: #FFF3B0;
+  --pastel-purple: #D0BDF4;
+  --pastel-orange: #FFD8A8;
+
+  --dark-bg: #121212;
+  --dark-card: #1E1E1E;
+  --dark-sidebar: #0F172A;
+  --dark-border: #2C2C2C;
+  --dark-hover: #2A2A2A;
+  --success: #22C55E;
+  --warning: #FACC15;
+  --danger: #EF4444;
+  --info: #3B82F6;
+
+  --white-5: rgba(255,255,255,0.05);
+  --white-10: rgba(255,255,255,0.1);
+  --white-20: rgba(255,255,255,0.2);
+
+  --black-5: rgba(0,0,0,0.05);
+  --black-10: rgba(0,0,0,0.1);
+  --black-20: rgba(0,0,0,0.2);
+
+  --gradient-primary: linear-gradient(135deg, #0D1B2A, #1B263B);
+  --gradient-orange: linear-gradient(135deg, #F77F00, #FCBF49);
+  --gradient-blue: linear-gradient(135deg, #007BFF, #00B4D8);
+  --gradient-purple: linear-gradient(135deg, #7B2CBF, #C77DFF);
+  --gradient-green: linear-gradient(135deg, #2ECC71, #80ED99);
+  --gradient-dark: linear-gradient(135deg, #121212, #1E293B);
+  --gradient-neon: linear-gradient(135deg, #00F0FF, #BC13FE);
+  --gradient-fire: linear-gradient(135deg, #FF512F, #F09819);
+  --gradient-sunset: linear-gradient(135deg, #FF6A00, #EE0979);
+  --gradient-ocean: linear-gradient(135deg, #2193B0, #6DD5ED);
+  --gradient-forest: linear-gradient(135deg, #134E5E, #71B280);
+  --gradient-cyberpunk: linear-gradient(135deg, #ff00cc, #3333ff);
+}

@@ -1,0 +1,70 @@
+<div class="login-wrapper">
+
+  <!-- GAUCHE : même panneau que le login -->
+  <div class="left-panel">
+    <div class="overlay"></div>
+  </div>
+
+  <!-- DROITE : choix méthode OTP -->
+  <div class="right-panel">
+    <div class="form-container">
+
+      <div class="brand">
+        <div class="logo-circle">
+          <span class="logo-icon">🚢</span>
+        </div>
+        <div>
+          <div class="brand-name">CargoTrust</div>
+          <div class="brand-tag">Plateforme d'importation</div>
+        </div>
+      </div>
+
+      <h2 class="form-title">Vérification 🔐</h2>
+      <p class="form-sub">Choisissez comment recevoir votre code de confirmation</p>
+
+      <div class="methods-list">
+
+        <!-- Email -->
+        <button class="method-card" [class.selected]="selectedMethod === 'email'" (click)="selectMethod('email')">
+          <div class="method-icon-wrap email-icon">
+            <span>✉️</span>
+          </div>
+          <div class="method-info">
+            <div class="method-name">Email</div>
+            <div class="method-desc">Envoyer le code à <strong>{{ maskedEmail }}</strong></div>
+          </div>
+          <div class="method-check" [class.visible]="selectedMethod === 'email'">✓</div>
+          <span class="method-arrow">›</span>
+        </button>
+
+        <!-- SMS (optionnel) -->
+        <button class="method-card disabled" disabled>
+          <div class="method-icon-wrap sms-icon">
+            <span>📱</span>
+          </div>
+          <div class="method-info">
+            <div class="method-name">SMS <span class="badge-soon">Bientôt</span></div>
+            <div class="method-desc">Envoi par message texte</div>
+          </div>
+          <span class="method-arrow">›</span>
+        </button>
+
+      </div>
+
+      <button
+        class="btn-login"
+        [disabled]="!selectedMethod || isLoading"
+        [class.loading]="isLoading"
+        (click)="sendCode()"
+      >
+        <span *ngIf="!isLoading">Envoyer le code</span>
+        <span *ngIf="isLoading" class="spinner"></span>
+      </button>
+
+      <button class="btn-back" (click)="goBack()">
+        ← Retour à la connexion
+      </button>
+
+    </div>
+  </div>
+</div>
